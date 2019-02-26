@@ -1,0 +1,213 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+	<groupId>com.xdhpx</groupId>
+	<artifactId>xdhpx-parent</artifactId>
+	<version>1.0.0</version>
+  </parent>
+	
+  <artifactId>xdhpx-parent-spring</artifactId>
+  <packaging>pom</packaging>
+  <name>${project.artifactId}</name>
+
+  <properties>
+   		<!--指定Maven用什么编码来读取源码及文档 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- dubbo + zookeeper-->
+		<dubbo.version>2.5.3</dubbo.version>
+		<zookeeper.version>3.4.6</zookeeper.version>
+		<zkclient.version>0.1</zkclient.version>
+        <!-- spring版本号 -->
+		<spring.version>4.3.0.RELEASE</spring.version>
+		<!-- hibernate -->
+        <hibernate.version>4.2.5.Final</hibernate.version>
+        <!-- mysql -->
+        <mysql.version>5.1.29</mysql.version>
+        <!-- 阿里数据源 德鲁伊 -->
+        <druid.version>1.1.5</druid.version>
+        <!-- servlet -->
+		<servlet.version>3.1.0</servlet.version>
+		<!-- swagger版本号 -->
+		<swagger.version>2.7.0</swagger.version>
+		<!-- log -->
+		<slf4jVersion>1.7.21</slf4jVersion>
+        <log4jVersion>1.2.17</log4jVersion>
+		<!-- json -->
+		<fastjson.version>1.2.38</fastjson.version>
+		<!-- commons-lang -->
+		<commons-lang.version>2.6</commons-lang.version>
+		<!-- junit -->
+		<junit.version>4.12</junit.version>
+  </properties>
+  
+  <dependencyManagement>
+			<dependencies>
+					<!-- Spring依赖 开始 -->
+				<dependency>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-webmvc</artifactId>
+					<version>${spring.version}</version>
+				</dependency>
+				
+				<dependency>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-core</artifactId>
+					<version>${spring.version}</version>
+				</dependency>
+				
+				<dependency>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-tx</artifactId>
+					<version>${spring.version}</version>
+				</dependency>
+				
+				  <dependency>
+			            <groupId>org.springframework</groupId>
+			            <artifactId>spring-aop</artifactId>
+			            <version>${spring.version}</version>
+			        </dependency>
+			        
+			        <dependency>
+			            <groupId>org.springframework</groupId>
+			            <artifactId>spring-aspects</artifactId>
+			            <version>${spring.version}</version>
+			        </dependency>
+			        
+			        <dependency>
+					    <groupId>org.springframework</groupId>
+					    <artifactId>spring-beans</artifactId>
+					    <version>${spring.version}</version>
+					</dependency>
+					
+					<dependency>
+				        <groupId>org.springframework</groupId>
+				        <artifactId>spring-context</artifactId>
+				         <version>${spring.version}</version>
+				    </dependency>
+
+					<dependency>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-orm</artifactId>
+						<version>${spring.version}</version>
+					</dependency>
+					
+					<dependency>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-test</artifactId>
+						<version>${spring.version}</version>
+					</dependency>
+			        <!-- Spring 依赖 结束 -->
+			        
+			        <!-- hibernate依赖 开始 -->
+			        <dependency>
+						<groupId>org.hibernate</groupId>
+						<artifactId>hibernate-core</artifactId>
+						<version>${hibernate.version}</version>
+					</dependency>
+					
+					<dependency>
+						<groupId>org.hibernate</groupId>
+						<artifactId>hibernate-ehcache</artifactId>
+						<version>${hibernate.version}</version>
+					</dependency>
+			        <!-- hibernate依赖 结束 -->
+			        
+			        <!-- mysql依赖 开始 -->
+			        <dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>${mysql.version}</version>
+					</dependency>
+			        <!-- mysql依赖 结束 -->
+			        
+			        <!-- druid依赖 开始 -->
+			        <dependency>
+						<groupId>com.alibaba</groupId>
+						<artifactId>druid</artifactId>
+						<version>${druid.version}</version>
+					</dependency>
+			        <!-- druid依赖 结束 -->
+			        
+			        <!-- dubbo + zookeeper依赖 开始 -->
+			        <dependency>
+						<groupId>com.alibaba</groupId>
+						<artifactId>dubbo</artifactId>
+						<version>${dubbo.version}</version>
+					 </dependency>
+					 <dependency>  
+				         <groupId>org.apache.zookeeper</groupId>  
+						 <artifactId>zookeeper</artifactId>  
+						 <version>${zookeeper.version}</version>
+				     </dependency>
+				     <dependency>  
+					     	<groupId>com.github.sgroschupf</groupId>  
+							<artifactId>zkclient</artifactId>  
+							<version>${zkclient.version}</version>
+					  </dependency>
+			        <!-- dubbo + zookeeper依赖 结束 -->
+			        
+			        <!-- servlet依赖 -->
+					<dependency>
+						<groupId>javax.servlet</groupId>
+						<artifactId>javax.servlet-api</artifactId>
+						<version>${servlet.version}</version>
+					</dependency>
+			        
+			        <!-- swagger -->
+			        <dependency>
+		                <groupId>io.springfox</groupId>
+		                <artifactId>springfox-swagger2</artifactId>
+		                <version>${swagger.version}</version>
+		            </dependency>
+		            <dependency>
+		                <groupId>io.springfox</groupId>
+		                <artifactId>springfox-swagger-ui</artifactId>
+		                <version>${swagger.version}</version>
+		            </dependency>
+						    
+				    <!--Slf4j + Log4j日志依赖 开始-->
+			        <dependency>
+			            <groupId>org.slf4j</groupId>
+			            <artifactId>slf4j-api</artifactId>
+			            <version>${slf4jVersion}</version>
+			        </dependency>
+			        <dependency>
+			            <groupId>org.slf4j</groupId>
+			            <artifactId>slf4j-log4j12</artifactId>
+			            <version>${slf4jVersion}</version>
+			        </dependency>
+			        <dependency>
+			            <groupId>log4j</groupId>
+			            <artifactId>log4j</artifactId>
+			            <version>${log4jVersion}</version>
+			        </dependency>
+		        	<!--Slf4j + Log4j日志依赖 结束-->
+				
+					<!-- json -->
+				    <dependency>
+					      <groupId>com.alibaba</groupId>
+					      <artifactId>fastjson</artifactId>
+					      <version>${fastjson.version}</version>
+				    </dependency>
+				    
+					<!-- commons -->
+				    <dependency>
+						<groupId>commons-lang</groupId>
+						<artifactId>commons-lang</artifactId>
+						<version>${commons-lang.version}</version>
+					</dependency>
+					
+					<!-- junit -->
+					<dependency>
+					    <groupId>junit</groupId>
+					    <artifactId>junit</artifactId>
+					    <version>${junit.version}</version>
+					</dependency>
+				    
+			 </dependencies>
+	</dependencyManagement>
+
+</project>

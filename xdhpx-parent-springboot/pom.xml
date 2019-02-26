@@ -1,0 +1,127 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+	<groupId>com.xdhpx</groupId>
+	<artifactId>xdhpx-parent</artifactId>
+	<version>1.0.0</version>
+  </parent>
+
+  <artifactId>xdhpx-parent-springboot</artifactId>
+  <packaging>pom</packaging>
+  <name>${project.artifactId}</name>
+
+  <properties>
+  		 <!--指定Maven用什么编码来读取源码及文档 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<!-- SpringBoot相关 -->
+		<springBoot.version>1.5.6.RELEASE</springBoot.version>
+		<!-- dubbo + zookeeper-->
+		<dubbo.version>2.5.3</dubbo.version>
+		<zookeeper.version>3.4.6</zookeeper.version>
+		<zkclient.version>0.1</zkclient.version>
+	    <!-- 阿里数据源 德鲁伊 -->
+	    <druid.version>1.1.5</druid.version>
+		<!-- swagger版本号 -->
+		<swagger.version>2.7.0</swagger.version>
+		<!-- json -->
+		<fastjson.version>1.2.38</fastjson.version>
+		<!-- commons-lang -->
+		<commons-lang.version>2.6</commons-lang.version>
+		<!-- junit -->
+		<junit.version>4.12</junit.version>
+  </properties>
+  
+  <dependencyManagement>
+			<dependencies>
+					
+				<!-- SpringBoot -->
+				 <dependency>
+			            <groupId>org.springframework.boot</groupId>
+			            <artifactId>spring-boot-dependencies</artifactId>
+			            <version>${springBoot.version}</version>
+			            <type>pom</type>
+			            <scope>import</scope>
+		         </dependency>
+		         
+		         <!-- SpringBoot Druid依赖 开始 -->
+					<dependency>
+					   <groupId>com.alibaba</groupId>
+					   <artifactId>druid-spring-boot-starter</artifactId>
+					   <version>${druid.version}</version>
+					</dependency>
+			        <!-- SpringBoot Druid依赖 结束 -->
+			        
+			        <!-- dubbo + zookeeper依赖 开始 -->
+			        <dependency>
+						<groupId>com.alibaba</groupId>
+						<artifactId>dubbo</artifactId>
+						<exclusions>  
+			                <exclusion>  
+			                    <groupId>org.springframework</groupId>  
+			                    <artifactId>spring</artifactId>  
+			                </exclusion>  
+			            </exclusions>  
+						<version>${dubbo.version}</version>
+					 </dependency>
+					 
+					 <dependency>  
+				         <groupId>org.apache.zookeeper</groupId>  
+						 <artifactId>zookeeper</artifactId>  
+						 <version>${zookeeper.version}</version>
+				     	 <exclusions>
+						    	<!--如果你用的logback日志，该包会引起jar包冲突-->
+						        <exclusion>
+						            <groupId>org.slf4j</groupId>
+						            <artifactId>slf4j-log4j12</artifactId>
+						        </exclusion>
+						    </exclusions>
+				     </dependency>
+				     
+				     <dependency>  
+					     	<groupId>com.github.sgroschupf</groupId>  
+							<artifactId>zkclient</artifactId>  
+							<version>${zkclient.version}</version>
+					  </dependency>
+			        <!-- dubbo + zookeeper依赖 结束 -->
+			        
+			        <!-- swagger -->
+			        <dependency>
+		                <groupId>io.springfox</groupId>
+		                <artifactId>springfox-swagger2</artifactId>
+		                <version>${swagger.version}</version>
+		            </dependency>
+		            <dependency>
+		                <groupId>io.springfox</groupId>
+		                <artifactId>springfox-swagger-ui</artifactId>
+		                <version>${swagger.version}</version>
+		            </dependency>
+						    
+					<!-- json -->
+				    <dependency>
+					      <groupId>com.alibaba</groupId>
+					      <artifactId>fastjson</artifactId>
+					      <version>${fastjson.version}</version>
+				    </dependency>
+				    
+					<!-- commons -->
+				    <dependency>
+						<groupId>commons-lang</groupId>
+						<artifactId>commons-lang</artifactId>
+						<version>${commons-lang.version}</version>
+					</dependency>
+					
+					<!-- junit -->
+					<dependency>
+					    <groupId>junit</groupId>
+					    <artifactId>junit</artifactId>
+					    <version>${junit.version}</version>
+					</dependency>
+				    
+			 </dependencies>
+	</dependencyManagement>
+
+
+</project>
