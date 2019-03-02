@@ -32,6 +32,10 @@
 		<commons-lang.version>2.6</commons-lang.version>
 		<!-- junit -->
 		<junit.version>4.12</junit.version>
+		<!-- xdhpx-config -->
+		<config.version>1.0.0.RELEASE</config.version>
+		<!-- xdhpx-tools -->
+		<tools.version>1.0.0.RELEASE</tools.version>
   </properties>
   
   <dependencyManagement>
@@ -120,6 +124,35 @@
 					    <version>${junit.version}</version>
 					</dependency>
 				    
+				     <dependency>
+					     <groupId>com.github.haoruilong.xdhpx-config</groupId>
+					     <artifactId>xdhpx-config-jpa</artifactId>
+					     <version>${config.version}</version>
+					 </dependency>
+					 
+					 <dependency>
+					     <groupId>com.github.haoruilong.xdhpx-config</groupId>
+					     <artifactId>xdhpx-config-druid</artifactId>
+					     <version>${config.version}</version>
+					 </dependency>
+					 
+					 <dependency>
+					     <groupId>com.github.haoruilong.xdhpx-config</groupId>
+					     <artifactId>xdhpx-config-resdis</artifactId>
+					     <version>${config.version}</version>
+					 </dependency>
+					 
+					 <dependency>
+					     <groupId>com.github.haoruilong.xdhpx-config</groupId>
+					     <artifactId>xdhpx-config-web</artifactId>
+					     <version>${config.version}</version>
+					 </dependency>
+					 
+					 <dependency>
+					     <groupId>com.github.haoruilong</groupId>
+					     <artifactId>xdhpx-tools</artifactId>
+					     <version>${tools.version}</version>
+					 </dependency>
 			 </dependencies>
 	</dependencyManagement>
 

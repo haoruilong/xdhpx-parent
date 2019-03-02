@@ -42,6 +42,39 @@
             <url>http://192.168.14.6:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement> -->
+    
+    <!--私服地址 -->
+	<repositories>
+			<!-- 中央仓库 -->
+			<repository>
+            <id>aliyunMaven</id>
+            <name>aliyunMaven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+        </repository>
+        
+		<repository>
+				<id>Central</id>
+				<name>Central</name>
+				<url>http://repo1.maven.org/maven2/</url>
+				<releases>
+					<enabled>true</enabled>
+				</releases>
+				<snapshots>
+					<enabled>false</enabled>
+				</snapshots>
+			</repository>
+			
+			<repository>
+			      	<id>jitpack.io</id>
+			      	<url>https://jitpack.io</url>
+		 	 </repository>
+	</repositories>
 	
 	<modules>
 		<module>xdhpx-parent-spring</module>
