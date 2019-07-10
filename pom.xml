@@ -29,6 +29,20 @@
 	    </pluginRepository>
 	</pluginRepositories> -->
 	
+<!-- 	<pluginRepositories>
+	    <pluginRepository>
+	        <id>zyHealth-nexus</id>
+	        <name>zyHealth-nexus</name>
+	        <url>http://192.168.15.238:8081/nexus/content/groups/public</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>true</enabled>
+	        </snapshots>
+	    </pluginRepository>
+	</pluginRepositories> -->
+	
 	<!-- 项目私服deploy发布配置 -->
 <!-- 	<distributionManagement>
         <repository>
@@ -43,7 +57,7 @@
         </snapshotRepository>
     </distributionManagement> -->
     
-    <!--私服地址 -->
+    <!--远程私服地址 -->
 	<repositories>
 			<!-- 中央仓库 -->
 			<repository>
