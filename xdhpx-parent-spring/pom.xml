@@ -25,7 +25,7 @@
 		<!-- hibernate -->
         <hibernate.version>4.2.5.Final</hibernate.version>
         <!-- mysql -->
-        <mysql.version>5.1.29</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
         <!-- 阿里数据源 德鲁伊 -->
         <druid.version>1.1.5</druid.version>
         <!-- servlet -->
