@@ -21,7 +21,7 @@
 		<zookeeper.version>3.4.6</zookeeper.version>
 		<zkclient.version>0.1</zkclient.version>
         <!-- spring版本号 -->
-		<spring.version>4.3.0.RELEASE</spring.version>
+		<spring.version>5.3.18</spring.version>
 		<!-- hibernate -->
         <hibernate.version>4.2.5.Final</hibernate.version>
         <!-- mysql -->
