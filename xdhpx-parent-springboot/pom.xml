@@ -20,7 +20,7 @@
 		<springBoot.version>1.5.6.RELEASE</springBoot.version>
 		<!-- dubbo + zookeeper-->
 		<dubbo.version>2.5.7</dubbo.version>
-		<zookeeper.version>3.4.6</zookeeper.version>
+		<zookeeper.version>3.4.14</zookeeper.version>
 		<zkclient.version>0.1</zkclient.version>
 	    <!-- 阿里数据源 德鲁伊 -->
 	    <druid.version>1.1.5</druid.version>
